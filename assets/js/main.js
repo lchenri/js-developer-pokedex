@@ -9,9 +9,9 @@ function imprimeModal(number, name, type, height, weight, ability, move) {
 
     document.getElementById("modalPokemonId").textContent = number;
     document.getElementById("modalPokemonName").textContent = name;
-    document.getElementById("modalPokemonType").textContent = type;
     document.getElementById("modalPokemonHeight").textContent = height;
-    document.getElementById("modalPokemonWeight").textContent = weight;
+    document.getElementById("modalPokemonType").textContent = type;
+    //document.getElementById("modalPokemonWeight").textContent = weight;
     document.getElementById("modalPokemonAbility").textContent = ability;
     document.getElementById("modalPokemonMove").textContent = move;
     document.getElementById("myModal").style.display = "block";
