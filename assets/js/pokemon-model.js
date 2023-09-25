@@ -12,4 +12,7 @@ class Pokemon {
     abilities = [];
     move;
     moves = [];
+    attack;
+    defense;
+    speed;
 }

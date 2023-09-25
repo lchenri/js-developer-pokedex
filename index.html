@@ -20,6 +20,7 @@
     <!-- Nosso CSS -->
     <link rel="stylesheet" href="/assets/css/global.css">
     <link rel="stylesheet" href="/assets/css/pokedex.css">
+    <link rel="stylesheet" href="/assets/css/modal-pokedex.css">
 </head>
 
 <body>
@@ -28,7 +29,29 @@
 
         <ol id="pokemonList" class="pokemons">
             <!-- ..... Pokemons here ..... -->
-            <div id="myModal" class="modal" style="display: none;">
+            <div id="myModal" class="container" style="display: none;">
+                <div class="card">
+                    <span class="close" onclick="fecharModal()">&times;</span>
+                    <img id="modalPokemonImg" src=""/>
+                    <h2 class="poke-name" id="modalPokemonName"></h2>
+                    <div class="stats">
+                        <div>
+                          <h3 id="modalPokemonAttack"></h3>
+                          <p>Ataque</p>
+                        </div>
+                        <div>
+                          <h3 id="modalPokemonDefense"></h3>
+                          <p>Defesa</p>
+                        </div>
+                        <div>
+                          <h3 id="modalPokemonSpeed"></h3>
+                          <p>Velocidade</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div id="myModal" class="modal" style="display: none;">
                 <div class="modal-content">
                     <span class="close" onclick="fecharModal()">&times;</span>
                     <p id="modalPokemonId"></p>
@@ -37,9 +60,9 @@
                     <p id="modalPokemonType"></p>
                     <p id="modalPokemonAbility"></p>
                     <p id="modalPokemonMove"></p>
-                    <!-- Adicione mais informações do Pokémon aqui, se necessário -->
+                     Adicione mais informações do Pokémon aqui, se necessário 
                 </div>
-            </div>            
+            </div> -->            
         </ol>
 
         <div class="pagination">

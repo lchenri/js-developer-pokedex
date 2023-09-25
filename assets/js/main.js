@@ -5,15 +5,14 @@ const maxRecords = 151
 const limit = 10
 let offset = 0;
 
-function imprimeModal(number, name, type, height, weight, ability, move) {
+function imprimeModal(number, name, attack, defense, speed) {
 
-    document.getElementById("modalPokemonId").textContent = number;
     document.getElementById("modalPokemonName").textContent = name;
-    document.getElementById("modalPokemonHeight").textContent = height;
-    document.getElementById("modalPokemonType").textContent = type;
-    //document.getElementById("modalPokemonWeight").textContent = weight;
-    document.getElementById("modalPokemonAbility").textContent = ability;
-    document.getElementById("modalPokemonMove").textContent = move;
+    document.getElementById("modalPokemonImg").src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${number}.svg`;
+    document.getElementById("modalPokemonAttack").textContent = attack;
+    document.getElementById("modalPokemonDefense").textContent = defense;
+    document.getElementById("modalPokemonSpeed").textContent = speed;
+
     document.getElementById("myModal").style.display = "block";
 }
 
@@ -23,7 +22,7 @@ function fecharModal(){
 
 function convertPokemonToLi(pokemon) {
     return `
-        <li onClick="imprimeModal('${pokemon.number}', '${pokemon.name}', '${pokemon.type}', '${pokemon.height}', '${pokemon.weight}', '${pokemon.ability}', '${pokemon.move}')" class="pokemon ${pokemon.type}">
+        <li onClick="imprimeModal('${pokemon.number}', '${pokemon.name}', '${pokemon.attack}', '${pokemon.defense}', '${pokemon.speed}')" class="pokemon ${pokemon.type}">
             <span class="number">#${pokemon.number}</span>
             <span class="name">${pokemon.name}</span>
 
